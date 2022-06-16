@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .flex {
+            display: flex;
+            width: max-content;
+        }
+        .box0 {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            background-color: {{color1}};
+            /* background-color: blue; */
+            /* display: inline-block; */
+        }
+        .box1 {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            /* background-color: purple; */
+            background-color: {{color2}};
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+        <div class="grid">
+            {% for row in range(0,x): %}
+            <div class=flex>
+                {% for col in range(0,y): %} 
+                    <div class="box{{(row +col) % 2}}"></div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+
+</body>
+</html>
