@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playgrounds</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        .grid {
+            display: flex;
+            width: max-content;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: {{color1}};
+        }
+    </style>
+</head>
+<body>
+            <div class="grid">
+            {% for box in range(0,x): %}
+                <div class="box"></div>
+            {% endfor %}
+        </div>
+        </div>
+</body>
+</html>
