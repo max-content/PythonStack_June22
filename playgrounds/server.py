@@ -14,6 +14,6 @@ def play(x=8, color1='red'):
     for i in range(0, x):
         return render_template("play.html", x = x, color1 = color1)
 
-
+app.run(debug=True)
 if __name__ == "__main__":
     app.run(debug=True)
