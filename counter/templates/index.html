@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            background-color:#467599;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        body {
+            margin-top: 230px;
+            text-align: center;
+        }
+        h1 {
+            letter-spacing: 2px;
+        }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        input {
+            margin: 10px;
+            border-radius: 15px;
+            font-size: larger;
+            width:fit-content;
+        }
+        input:hover{
+            background-color: #1D3354;
+            color: #E9FFF9;
+        }
+
+    </style>
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <h3> {{session['count']}} times</h3>
+    <div>
+        <form action="/add_two" method="get">
+            <input type="submit" value="Count 2"/>
+        </form>
+        <form action="/destroy_session" method="get">
+            <input type="submit" value="Reset"/>
+        </form>
+    </div>
+
+</body>
+</html>
